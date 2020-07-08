@@ -1,14 +1,17 @@
 {
-  "name": "nepal-map",
+  "name": "vue-great-nepal",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build-bundle": "vue-cli-service build --target lib --name vue-great-nepal ./src/index.js"
   },
+  "main": "./dist/vue-great-nepal.common.js",
+  "files": [
+    "dist/*"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
+    "lodash": "^4.17.19",
     "vue": "^2.6.11"
   },
   "devDependencies": {

@@ -1,19 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div style="float:left; width:80%">
+      <ZoneMap />
+      <DistrictMap set-random-color hover-color="orange" stroke-color="black" stroke-width="3" />
+      <!-- <DistrictMap  :hover-color="'yellow'" stroke-color="black" stroke-width="0.2"/> -->
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DistrictMap from "./components/DistrictMap.vue";
+import ZoneMap from "./components/ZoneMap.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    DistrictMap,
+    ZoneMap
+  },
+  methods: {
+    distSelected(district) {
+      console.log(district)
+    }
   }
-}
+};
 </script>
 
 <style>
