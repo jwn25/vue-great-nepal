@@ -67,17 +67,17 @@ export default {
 
 Example event for DistrictMap (on district click or hover)
 
-```json
+```js
 {
-  area: 3312
-  headquarter: "Salleri"
-  headquarter_ne: "सल्लेरी"
-  max_elevation: 8848
-  name: "Solukhumbu"
-  name_ne: "सोलुखुम्बु"
-  population: 105886
-  province: 1
-  website: "www.ddcsolukhumbu.gov.np"
+  area: 3312,
+  headquarter: "Salleri",
+  headquarter_ne: "सल्लेरी",
+  max_elevation: 8848,
+  name: "Solukhumbu",
+  name_ne: "सोलुखुम्बु",
+  population: 105886,
+  province: 1,
+  website: "www.ddcsolukhumbu.gov.np",
   zip: 56000
 }
 ```
@@ -87,15 +87,11 @@ Example event for DistrictMap (on district click or hover)
 
 Jeewan Dhakal
 
-tokeyrun@gmail.com
-[Facebook](https://facebook.com/kiran.neupz)
+jeewandhakal25@gmail.com
 
-### React Tutor @ Youtube
-
-Channel Name: Buggged
-[Youtube](https://www.youtube.com/channel/UChvdEZeMyLPhZ0Jt_K3RCyQ)
-[Website](https://buggged.com)
-
+### Credit
+Thank you [Kiran Neupane](https://github.com/keyrunpay) for this awesome idea. 
+Check out his [repository](https://github.com/keyrunpay/react-nepal-map) for react-js component for Nepal map.
+ 
 ## License
-
-MIT © [keyrunpay](https://github.com/keyrunpay)
+MIT © [jwn25](https://github.com/jwn25)
