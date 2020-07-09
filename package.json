@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": false,
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
     "build-bundle": "vue-cli-service build --target lib --name vue-great-nepal ./src/index.js"
   },
   "main": "./dist/vue-great-nepal.common.js",

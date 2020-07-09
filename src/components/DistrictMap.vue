@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div style="width:100%" :class="wrapperClass || ''">
     <svg viewBox="0 0 1026.077 519.136">
       <g transform="translate(-52.379 -15.971)">
         <path
+          :class="itemClass || ''"
           @click="districtSelected(eachDistrict)"
           :ref="`district_${eachDistrict.name}`"
           :style="'cursor:pointer; fill:'+getProvienceColor(eachDistrict)+''"
@@ -11,9 +12,10 @@
           :d="eachDistrict.shape"
           :stroke="strokeColor || '#000'"
           :stroke-width="strokeWidth"
-          @mouseover="mapItemHovered(`district_${eachDistrict.name}`)"
+          @mouseover="mapItemHovered(`district_${eachDistrict.name}`, eachDistrict)"
           @mouseout="mapItemRemoved(`district_${eachDistrict.name}`, eachDistrict.pathColor)"
-        />
+        >
+        </path>
       </g>
     </svg>
   </div>
@@ -24,13 +26,14 @@ import districtMapData from "./../mapdata/district";
 import _ from "lodash";
 import {
   defaultColor,
-  getRandomColor,
-  defaultProvinceColor
+  defaultProvinceColor,
+  getRandomColor
 } from "./../helpers/colors";
 export default {
-  name: "Nepal District Map",
+  name: "NepalDistrictMap",
   props: {
-    onDistrictSelect: Function,
+    onMapClick: Function,
+    onMapHover: Function,
     setRandomColor: {
       type: Boolean,
       default: false
@@ -43,9 +46,25 @@ export default {
       type: String,
       default: null
     },
+    color: {
+      type: String,
+      default: null
+    },
     strokeWidth: {
       type: Number,
       default: 1
+    },
+    provienceColors: {
+      type: Array,
+      default: () => []
+    },
+    wrapperClass: {
+      type: String,
+      default: null
+    },
+    itemClass: {
+      type: String,
+      default: null
     }
   },
   data() {
@@ -58,16 +77,10 @@ export default {
   },
   methods: {
     getProvienceColor(district) {
-      let pathColor = "";
-      if (this.setRandomColor) {
-        pathColor = getRandomColor();
-      } else {
-        let pathColorList = defaultProvinceColor;
-        pathColor =
-          pathColorList.length > district.province - 1
-            ? pathColorList[district.province - 1]
-            : defaultProvinceColor[district.province - 1];
-      }
+      let pathColorList = (this.provienceColors.length) ? this.provienceColors : defaultProvinceColor;
+      let pathColor = pathColorList.length > district.province - 1 ? pathColorList[district.province - 1]:defaultProvinceColor[district.province - 1];
+      if(this.setRandomColor) pathColor = getRandomColor()
+      if(this.color) pathColor = this.color
       district["pathColor"] = pathColor;
       return pathColor;
     },
@@ -75,17 +88,41 @@ export default {
     districtSelected(district) {
       let district_data = {
         name: district.name,
+        name_ne: district.name_ne,
         province: district.province,
-        zip: district.zip
+        zip: district.zip,
+        area: district.area,
+        max_elevation: district.max_elevation,
+        population: district.population,
+        headquarter: district.headquarter,
+        headquarter_ne: district.headquarter_ne,
+        website: district.website        
       };
 
-      if (this.onDistrictSelect) this.onDistrictSelect(district_data);
+      if (this.onMapClick) this.onMapClick(district_data);
     },
 
-    mapItemHovered(reference) {
+    mapItemHovered(reference, district) {
       this.$refs[reference][0].style.fill = this.hoverColor
         ? this.hoverColor
         : defaultColor;
+
+      if(this.onMapHover) {
+        let district_data = {
+          name: district.name,
+          name_ne: district.name_ne,
+          province: district.province,
+          zip: district.zip,
+          area: district.area,
+          max_elevation: district.max_elevation,
+          population: district.population,
+          headquarter: district.headquarter,
+          headquarter_ne: district.headquarter_ne,
+          website: district.website        
+        };
+
+        this.onMapHover(district_data)
+      }
     },
 
     mapItemRemoved(reference, org_color) {
