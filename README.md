@@ -12,7 +12,13 @@ npm install --save vue-great-nepal
 
 ## Live Demo
 
-<!-- [https://keyrunpay.github.io/react-nepal-map](https://keyrunpay.github.io/react-nepal-map) -->
+Visit the links below and play around with different types of map available.
+
+[https://jwn25.github.io/vue-great-nepal](https://jwn25.github.io/vue-great-nepal) 
+
+OR
+
+[https://jeevandhakal.com.np/vue-great-nepal-playground](https://jeevandhakal.com.np/vue-great-nepal-playground)
 
 ## Usage
 
@@ -44,7 +50,6 @@ export default {
     },
   }
 }
-
 </script>
 ```
 

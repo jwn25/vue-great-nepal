@@ -2,7 +2,7 @@
   "name": "vue-great-nepal",
   "description": "Vue package for greater Nepal map",
   "keywords": ["nepal", "nepal-map", "vue-nepal-nepal", "map-of-nepal", "vue-nepal"],
-  "version": "1.2.1",
+  "version": "1.3.0",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
