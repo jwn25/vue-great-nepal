@@ -1,12 +1,19 @@
 {
   "name": "vue-great-nepal",
-  "version": "1.0.0",
+  "description": "Vue package for greater Nepal map",
+  "keywords": ["nepal", "nepal-map", "vue-nepal-nepal", "map-of-nepal", "vue-nepal"],
+  "version": "1.2.1",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib --name vue-great-nepal ./src/index.js"
+    "build-bundle": "vue-cli-service build --target lib --name vue-great-nepal ./src/index.js --mode development",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jwn25/vue-great-nepal"
   },
   "main": "./dist/vue-great-nepal.common.js",
   "files": [
@@ -18,27 +25,8 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
   },
   "browserslist": [
     "> 1%",

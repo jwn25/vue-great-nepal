@@ -1,11 +1,5 @@
-import Vue from "vue";
 import DistrictMap from "./components/DistrictMap";
 import ZoneMap from "./components/ZoneMap";
+import ProvinceMap from "./components/ProvinceMap"; 
 
-const AvailableComponents = [DistrictMap, ZoneMap];
-
-Object.keys(AvailableComponents).forEach((name) => {
-  Vue.component(name, AvailableComponents[name]);
-});
-
-export default AvailableComponents;
+export { DistrictMap, ZoneMap, ProvinceMap }

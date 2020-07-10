@@ -29,12 +29,14 @@ npm install --save vue-great-nepal
 </template>
 
 <script>
-import DistrictMap from 'vue-great-nepal'
+import { DistrictMap, ZoneMap, ProvinceMap } from 'vue-great-nepal'
 
 export default {
   name: 'App',
   components: {
-    DistrictMap
+    DistrictMap,
+    ZoneMap,
+    ProvinceMap
   },
   methods: {
     mapClicked(data) {

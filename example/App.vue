@@ -9,7 +9,7 @@
         :on-map-hover="mapHovered"
       />
     </div>
-    <div style="float:left; width:50%">
+    <!-- <div style="float:left; width:50%">
       <ZoneMap
         stroke-color="black"
         :hover-color="color"
@@ -30,14 +30,16 @@
         item-class="each--district"
         :on-map-hover="mapHovered"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import DistrictMap from "@/components/DistrictMap";
-import ZoneMap from "@/components/ZoneMap";
-import ProvinceMap from "@/components/ProvinceMap";
+import { DistrictMap } from './../dist/vue-great-nepal.common'
+// import DistrictMap from "@/components/DistrictMap";
+// import DistrictMap from './../dist/vue-great-nepal.common'
+// import ZoneMap from "@/components/ZoneMap";
+// import ProvinceMap from "@/components/ProvinceMap";
 export default {
   data() {
     return {
@@ -46,8 +48,8 @@ export default {
   },
   components: {
     DistrictMap,
-    ZoneMap,
-    ProvinceMap
+    // ZoneMap,
+    // ProvinceMap
   },
   methods: {
     mapClicked(item) {
