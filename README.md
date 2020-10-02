@@ -6,8 +6,13 @@
 
 ## Installation
 
+Using npm:
 ```bash
-npm install --save vue-great-nepal
+npm i vue-great-nepal
+```
+or using yarn:
+```bash
+yarn add vue-great-nepal
 ```
 
 ## Live Demo
@@ -97,7 +102,7 @@ Jeewan Dhakal
 
 jeewandhakal25@gmail.com
 
-### Credit
+### Credit & Inspirations
 Thank you [Kiran Neupane](https://github.com/keyrunpay) for this awesome idea. 
 Check out his [repository](https://github.com/keyrunpay/react-nepal-map) for react-js component for Nepal map.
  
