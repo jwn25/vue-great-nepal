@@ -35,11 +35,7 @@
 </template>
 
 <script>
-import { DistrictMap } from './../dist/vue-great-nepal.common'
-// import DistrictMap from "@/components/DistrictMap";
-// import DistrictMap from './../dist/vue-great-nepal.common'
-// import ZoneMap from "@/components/ZoneMap";
-// import ProvinceMap from "@/components/ProvinceMap";
+import { DistrictMap } from './../dist/vue-great-nepal.esm'
 export default {
   data() {
     return {

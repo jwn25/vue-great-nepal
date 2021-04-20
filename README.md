@@ -61,7 +61,7 @@ export default {
 | hover-color |   String (Color name e.g: red or color HEX code)  |  #eee4ed |  Set background color on map hover  |
 | stroke-width | Number |  1 | Set line width of map |
 | stroke-color | String (Color name e.g: red or color HEX code) |  1 | Set line color of map |
-| provience-colors | Array (Array of color codes for 7 provinces) | [] | Custom province color set e.g ['red', 'blue', '#FF00FF'.....] total 7. NOTE: Only applicable for DistrictMap and ProvinceMap|
+| province-colors | Array (Array of color codes for 7 provinces) | [] | Custom province color set e.g ['red', 'blue', '#FF00FF'.....] total 7. NOTE: Only applicable for DistrictMap and ProvinceMap|
 | wrapper-class | String | null | Custom class for whole map wrapper |
 | item-class | String | null | Custom class for each map item i.e. each district on DistrictMap |
     

@@ -51,7 +51,7 @@ export default {
       type: Number,
       default: 1
     },
-    provienceColors: {
+    provinceColors: {
       type: Array,
       default: () => []
     },
@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     getProvinceColor(province) { 
-      let pathColorList = (this.provienceColors.length) ? this.provienceColors : defaultProvinceColor;
+      let pathColorList = (this.provinceColors.length) ? this.provinceColors : defaultProvinceColor;
       let pathColor = pathColorList.length > province.number - 1 ? pathColorList[province.number - 1] : defaultProvinceColor[province.number - 1];
       if(this.setRandomColor) pathColor = getRandomColor()
       if(this.color) pathColor = this.color

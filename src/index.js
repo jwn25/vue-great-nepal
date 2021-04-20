@@ -1,5 +1,5 @@
-import DistrictMap from "./components/DistrictMap";
-import ZoneMap from "./components/ZoneMap";
-import ProvinceMap from "./components/ProvinceMap"; 
+import DistrictMap from "./components/DistrictMap.vue";
+import ZoneMap from "./components/ZoneMap.vue";
+import ProvinceMap from "./components/ProvinceMap.vue"; 
 
 export { DistrictMap, ZoneMap, ProvinceMap }
