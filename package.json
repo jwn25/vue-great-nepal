@@ -39,9 +39,9 @@
   "devDependencies": {
     "@rollup/plugin-buble": "^0.21.3",
     "@rollup/plugin-commonjs": "^11.1.0",
-    "@vue/cli-service": "~4.4.0",
+    "@vue/cli-service": "~5.0.8",
     "rollup": "^1.17.0",
-    "rollup-plugin-vue": "^5.0.1",
+    "rollup-plugin-vue": "^6.0.0",
     "vue-template-compiler": "^2.6.12"
   },
   "browserslist": [
